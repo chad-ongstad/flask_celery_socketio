@@ -9,7 +9,7 @@
   1. sudo pip install flask
   2. sudo pip install celery
   3. sudo pip install flask-socketio
-  4. sudo pip install eventlet
+  4. sudo pip install gevent
   
 ## RabbitMQ config:
   1. sudo rabbitmqctl add_vhost socketio
