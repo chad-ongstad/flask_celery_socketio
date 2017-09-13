@@ -21,7 +21,7 @@
      - python www.py
   3. Start the celery worker with the following command:
      - celery -A tasks worker --loglevel=info --concurrency=2
-  4. Navigate to <HOST>:5000 in your web browser.
+  4. Navigate to \<HOST\>:5000 in your web browser.
   
   
 Any questions email chad@dataroadtech.com
