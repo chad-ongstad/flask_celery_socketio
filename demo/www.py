@@ -3,9 +3,7 @@ from flask_socketio import SocketIO, join_room
 from random import randint
 import uuid
 import tasks
-import eventlet
 
-eventlet.monkey_patch()
 
 app=Flask(__name__)
 app.secret_key="DataRoadReflect"
