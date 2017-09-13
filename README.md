@@ -1,16 +1,16 @@
 # Flask Celery and SocketIO example
 
  
-## Dependencies
+## Dependencies:
   1. sudo apt-get install rabbitmq-server
   2. sudo apt-get install python-dev
 
-## Python Packages
+## Python Packages:
   1. sudo pip install flask
   2. sudo pip install celery
   3. sudo pip install flask_socketio, eventlet
   
-## RabbitMQ config
+## RabbitMQ config:
   1. sudo rabbitmqctl add_vhost socketio
   2. sudo rabbitmqctl set_permissions -p socketio guest ".*" ".*" ".*"
 
