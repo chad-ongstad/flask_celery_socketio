@@ -3,7 +3,7 @@
  
 ## Dependencies:
   1. sudo apt-get install rabbitmq-server
-  2. sudo apt-get install python-dev
+  2. sudo apt-get install python-pip python-dev build-essential
 
 ## Python Packages:
   1. sudo pip install flask
