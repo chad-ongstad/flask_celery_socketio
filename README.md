@@ -18,9 +18,9 @@
 ## To Run:
   1. navigate to the demo folder
   2. Start the web server with the following command:
-  python www.py
+     - python www.py
   3. Start the celery worker with the following command:
-  celery -A tasks worker --loglevel=info --concurrency=2
+     - celery -A tasks worker --loglevel=info --concurrency=2
   4. Navigate to <HOST>:5000 in your web browser.
   
   
