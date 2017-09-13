@@ -1,0 +1,62 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+<title>Long Running Task App</title>
+</head>
+<body><div>Click the button to start a task.</div>
+<form method='post' id="taskForm">
+<button type="submit" id="taskButton">Task</button>
+</form>
+<div id="Results"></div>
+
+
+<script>
+$(document).ready(function(){
+var namespace='/long_task';
+var socket = io.connect('http://' + document.domain + ':' + location.port+namespace);
+socket.on('connect', function() {
+               //// on a connection join a room 
+               socket.emit('join_room');
+                });
+
+socket.on('msg', function(data) {
+               $("#Results").prepend('<li>'+data.msg+'</li>');
+                });
+
+
+socket.on('status', function(data) {
+               if (data.msg=='End'){
+               $("#taskButton").show()
+               };
+              });
+
+});
+
+</script>
+
+
+<script>
+$("#taskButton").click(function(e){
+     $("#taskButton").hide();
+    $.ajax({ type: "POST",
+             url:'/runTask',
+             data: $("#taskForm").serialize(),
+             success:function(data)
+              {task=data.id;
+               $("#Results").empty();
+               $("#Results").prepend('<li>Task ID:'+task+' has been submitted.</li>');
+        
+               }
+
+
+
+             });
+     e.preventDefault();
+console.log('complete')
+});
+
+</script>
+
+</body>
+</html>
