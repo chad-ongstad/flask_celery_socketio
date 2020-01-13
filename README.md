@@ -24,4 +24,6 @@
   4. Navigate to \<HOST\>:5000 in your web browser.
   
   
-Any questions email chad@caoanalytics.com
+Any questions email chad@kodda.io
+
+www.kodda.io
